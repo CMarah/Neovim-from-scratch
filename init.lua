@@ -1,21 +1,21 @@
-require "user.options"
-require "user.keymaps"
-require "user.plugins"
-require "user.colorscheme"
-require "user.cmp"
-require "user.lsp"
-require "user.telescope"
-require "user.treesitter"
-require "user.autopairs"
-require "user.comment"
-require "user.gitsigns"
-require "user.nvim-tree"
-require "user.bufferline"
-require "user.lualine"
-require "user.toggleterm"
-require "user.project"
-require "user.impatient"
-require "user.indentline"
-require "user.alpha"
-require "user.whichkey"
-require "user.autocommands"
+require "user.options"        -- './lua/user/options.lua'
+require "user.keymaps"        -- './lua/user/keymaps.lua'
+require "user.plugins"        -- './lua/user/plugins.lua'
+require "user.colorscheme"    -- './lua/user/colorscheme.lua'
+require "user.cmp"            -- './lua/user/cmp.lua'
+require "user.lsp"            -- './lua/user/lsp.lua'
+require "user.telescope"      -- './lua/user/telescope.lua'
+require "user.treesitter"     -- './lua/user/treesitter.lua'
+require "user.autopairs"      -- './lua/user/autopairs.lua'
+require "user.comment"        -- './lua/user/comment.lua'
+require "user.gitsigns"       -- './lua/user/gitsigns.lua'
+require "user.nvim-tree"      -- './lua/user/nvim-tree.lua'
+require "user.bufferline"     -- './lua/user/bufferline.lua'
+require "user.lualine"        -- './lua/user/lualine.lua'
+require "user.toggleterm"     -- './lua/user/toggleterm.lua'
+require "user.project"        -- './lua/user/project.lua'
+require "user.impatient"      -- './lua/user/impatient.lua'
+require "user.indentline"     -- './lua/user/indentline.lua'
+require "user.alpha"          -- './lua/user/alpha.lua'
+require "user.whichkey"       -- './lua/user/whichkey.lua'
+require "user.autocommands"   -- './lua/user/autocommands.lua'
