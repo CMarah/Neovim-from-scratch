@@ -13,3 +13,7 @@ git clone git@github.com:CMarah/Neovim-from-scratch.git ~/.config/nvim
 Run `nvim` and wait for the plugins to be installed 
 
 **NOTE** (You will notice treesitter pulling in a bunch of parsers the next time you open Neovim) 
+
+## Requirements:
+
+- [BurntSushi/ripgrep](https://github.com/BurntSushi/ripgrep)
