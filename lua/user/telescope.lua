@@ -80,11 +80,11 @@ telescope.setup {
   pickers = {
     find_files = {
       --theme = "dropdown"
-      file_ignore_patterns = { "dist", "node_modules", "build" }
+      file_ignore_patterns = { "dist", "node_modules", "build", "yarn.lock" }
     },
     live_grep = {
       --theme = "dropdown"
-      file_ignore_patterns = { "dist", "node_modules", "build" }
+      file_ignore_patterns = { "dist", "node_modules", "build", "yarn.lock" }
     }
   },
   extensions = {
