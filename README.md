@@ -4,7 +4,7 @@
 
 Make sure to remove or move your current `nvim` directory
 
-**Requires** [Neovim v0.6.0](https://github.com/neovim/neovim/releases/tag/v0.6.0) or
+**Requires** [Neovim v0.7.0](https://github.com/neovim/neovim/releases/tag/v0.7.0) or
 higher. 
 ```
 git clone git@github.com:CMarah/Neovim-from-scratch.git ~/.config/nvim
