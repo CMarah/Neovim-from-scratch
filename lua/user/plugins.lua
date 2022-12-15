@@ -88,6 +88,9 @@ return packer.startup(function(use)
   --[[ use "jose-elias-alvarez/null-ls.nvim" -- for formatters and linters ]]
   --[[ use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" } ]]
 
+  -- Go
+  use "fatih/vim-go"
+
   -- Telescope
   use "nvim-telescope/telescope.nvim"
 
