@@ -8,6 +8,7 @@ local servers = {
 	"jsonls",
   "quick-lint-js",
 	-- "yamlls",
+  "gopls",
 }
 
 local settings = {
