@@ -5,7 +5,11 @@ end
 navigator.setup({
   transparency = 100,
   lsp = {
-    enable = false,
+    enable = true,
     disable_lsp = { "lua_ls" },
-  }
+    format_on_save = false,
+    code_action = {
+      enable = false,
+    },
+  },
 })
