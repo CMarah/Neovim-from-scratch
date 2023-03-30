@@ -4,6 +4,7 @@ if not status_ok then
 end
 navigator.setup({
   transparency = 100,
+  mason = true,
   lsp = {
     enable = true,
     disable_lsp = { "lua_ls" },
