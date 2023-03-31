@@ -7,7 +7,8 @@ navigator.setup({
   mason = true,
   lsp = {
     enable = true,
-    disable_lsp = { "lua_ls" },
+    disable_lsp = {},
+    disply_diagnostic_qf = false,
     format_on_save = false,
     code_action = {
       enable = false,
