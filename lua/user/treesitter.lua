@@ -3,6 +3,8 @@ if not status_ok then
   return
 end
 
+require('nvim-treesitter.configs').setup {}
+
 configs.setup {
   ensure_installed = { "lua", "javascript" }, -- one of "all", "maintained" (parsers with maintainers), or a list of languages
   sync_install = false, -- install languages synchronously (only applied to `ensure_installed`)
@@ -17,7 +19,6 @@ configs.setup {
   },
   indent = { enable = true, disable = { "yaml" } },
   context_commentstring = {
-    enable = true,
     enable_autocmd = false,
   },
 }

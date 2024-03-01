@@ -52,7 +52,7 @@ return packer.startup(function(use)
   use "akinsho/toggleterm.nvim"
   use "ahmedkhalf/project.nvim"
   use "lewis6991/impatient.nvim"
-  use "lukas-reineke/indent-blankline.nvim"
+  use { "lukas-reineke/indent-blankline.nvim", commit = "db7cbcb40cc00fc5d6074d7569fb37197705e7f6" }
   use "goolord/alpha-nvim"
   use "antoinemadec/FixCursorHold.nvim" -- This is needed to fix lsp doc highlight
   use "folke/which-key.nvim"
@@ -87,18 +87,6 @@ return packer.startup(function(use)
           { 'neovim/nvim-lspconfig' },
       },
   })
-	--[[ use { "neovim/nvim-lspconfig", commit = "f11fdff7e8b5b415e5ef1837bdcdd37ea6764dda" } -- enable LSP ]]
- --[[  use { "williamboman/mason.nvim", commit = "c2002d7a6b5a72ba02388548cfaf420b864fbc12"} -- simple to use language server installer ]]
- --[[  use { "williamboman/mason-lspconfig.nvim", commit = "0051870dd728f4988110a1b2d47f4a4510213e31" } ]]
-	--[[ use { "jose-elias-alvarez/null-ls.nvim", commit = "c0c19f32b614b3921e17886c541c13a72748d450" } -- for formatters and linters ]]
- --[[  use { "RRethy/vim-illuminate", commit = "a2e8476af3f3e993bb0d6477438aad3096512e42" } ]]
- --[[  use({ ]]
- --[[      'ray-x/navigator.lua', ]]
- --[[      requires = { ]]
- --[[          { 'ray-x/guihua.lua', run = 'cd lua/fzy && make' }, ]]
- --[[          { 'neovim/nvim-lspconfig' }, ]]
- --[[      }, ]]
- --[[  }) ]]
 
   -- Go
   use "fatih/vim-go"
@@ -118,6 +106,55 @@ return packer.startup(function(use)
 
   -- Github Copilot
   use "github/copilot.vim"
+
+  -- ChatGPT
+  use({
+    "jackMort/ChatGPT.nvim",
+      config = function()
+        require("chatgpt").setup({
+          answer_sign = "ﮧ", -- 🤖
+          max_line_length = 250,
+          yank_register = "+",
+          chat_layout = {
+            relative = "editor",
+            position = "50%",
+            size = {
+              height = "80%",
+              width = "80%",
+            },
+          },
+          chat_window = {
+            filetype = "chatgpt",
+            border = {
+              highlight = "FloatBorder",
+              style = "rounded",
+              text = {
+                top = " ChatGPT ",
+              },
+            },
+          },
+          chat_input = {
+            prompt = "  ",
+            border = {
+              highlight = "FloatBorder",
+              style = "rounded",
+              text = {
+                top_align = "center",
+                top = " Prompt ",
+              },
+            },
+          },
+          keymaps = {
+            submit = "<C-g>",
+          },
+        })
+      end,
+      requires = {
+        "MunifTanjim/nui.nvim",
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope.nvim"
+      }
+  })
 
   -- Automatically set up your configuration after cloning packer.nvim
   -- Put this at the end after all plugins

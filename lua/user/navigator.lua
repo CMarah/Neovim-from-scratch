@@ -8,7 +8,7 @@ navigator.setup({
   lsp = {
     enable = true,
     disable_lsp = {},
-    disply_diagnostic_qf = false,
+    display_diagnostic_qf = false,
     format_on_save = false,
     code_action = {
       enable = false,
