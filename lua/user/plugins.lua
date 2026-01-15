@@ -93,6 +93,7 @@ return packer.startup(function(use)
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"
+  use 'nvim-telescope/telescope-ui-select.nvim'
 
   -- Treesitter
   use {
@@ -106,6 +107,46 @@ return packer.startup(function(use)
 
   -- Github Copilot
   use "github/copilot.vim"
+  use ({
+    "CopilotC-Nvim/CopilotChat.nvim",
+      requires = {
+        "nvim-lua/plenary.nvim",
+        "nvim-telescope/telescope.nvim"
+      }
+  })
+
+  -- Avante
+  -- Required plugins
+  use 'nvim-treesitter/nvim-treesitter'
+  use 'stevearc/dressing.nvim'
+  use 'nvim-lua/plenary.nvim'
+  use 'MunifTanjim/nui.nvim'
+  use 'MeanderingProgrammer/render-markdown.nvim'
+
+  -- Optional dependencies
+  use 'hrsh7th/nvim-cmp'
+  use 'nvim-tree/nvim-web-devicons' -- or use 'echasnovski/mini.icons'
+  use 'HakonHarnes/img-clip.nvim'
+  use 'zbirenbaum/copilot.lua'
+
+  -- Avante.nvim with build process
+  use {
+    'yetone/avante.nvim',
+    branch = 'main',
+    run = 'make',
+    config = function()
+      require('avante').setup({
+        provider = "copilot",
+        suggestion = {
+          debounce = 600000,
+          throttle = 600,
+        },
+        behaviour = {
+          auto_suggestions = false, -- Experimental stage
+        },
+      })
+    end
+  }
 
   -- ChatGPT
   use({

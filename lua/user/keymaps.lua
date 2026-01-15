@@ -1,6 +1,6 @@
- -- Options:
- --   noremap -> don't map recursively
- --   silent  -> don't print output
+-- Options:
+--   noremap -> don't map recursively
+--   silent  -> don't print output
 local opts = { noremap = true, silent = true }
 local term_opts = { silent = true }
 
